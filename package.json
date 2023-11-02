@@ -1,0 +1,12 @@
+{
+    "name": "event-board-monorepo",
+    "scripts": {
+      "install:web": "cd event-board-web && npm install",
+      "start:web": "cd event-board-web && npm start",
+      "build:api": "cd event-board-api && docker-compose build",
+      "create:superuser": "cd event-board-api && docker-compose run web python manage.py createsuperuser --email example@example.com",
+      "start:api": "cd event-board-api && docker-compose up",
+      "start:both": "npm run start:web & npm run start:api"
+    }
+  }
+  

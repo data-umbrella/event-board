@@ -1,0 +1,168 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+nav ul {
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 1em;
+}
+
+.demo-app {
+  display: flex;
+  min-height: 100%;
+  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+.demo-app-sidebar {
+  width: 300px;
+  line-height: 1.5;
+  background: #eaf9ff;
+  border-right: 1px solid #d3e2e8;
+}
+
+.demo-app-sidebar-section {
+  padding: 2em;
+}
+
+.demo-app-main {
+  flex-grow: 1;
+  padding: 3em;
+}
+
+.fc {
+  /* the calendar root */
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.item-class {
+  padding-right: 0.4em;
+  margin-bottom: 2em;
+}
+
+.react-multi-carousel-dot-list {
+}
+
+.expandable {
+  display: none;
+}
+
+.expandable[aria-expanded="true"] {
+  display: block;
+}
+
+.fc-day-today {
+  background: lightGrey !important;
+  border: none !important;
+}
+
+.fc-event-time,
+.fc-event-title {
+}
+
+.fc-h-event {
+  border: none !important;
+  background-color: none !important;
+}
+.card-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 12rem;
+  height: 60%;
+}
+
+
+ .event-tooltip {
+  pointer-events: all !important;
+  border-radius: 5px;
+  opacity: 1 !important;
+  color: black !important;
+  border: #282c34 !important;
+  font-size: small !important;
+  background-color: #ffff !important;
+  border: 1px solid #000 !important;
+  border-radius: 20px !important;
+  background:#fff !important;
+  
+} 
+
+.event-tooltip-navigate {
+ color: #315790;
+ text-decoration: underline;
+ text-align: right;
+}
+
+.card-img {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 12rem;
+  height: 60%;
+}
+
+.pagination-navigation {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.pagination-navigation > li {
+  padding: 1rem;
+  
+}
+
+.pagination-navigation > li:hover, .pagination-navigation > li {
+  color:#4B4B4B;
+}
+
+.pagination-navigation > li:hover, .pagination-navigation > li.selected {
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+  text-decoration-color: #6B26FF;
+  color:#6B26FF;
+}
+
+.pagination-navigation .previous, .pagination-navigation .next {
+  color: #6B26FF;
+}

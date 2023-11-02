@@ -1,0 +1,24 @@
+# Contents from /event-board-api/.gitignore
+event-board-api/db.sqlite3
+event-board-api/*.pyc
+event-board-api/.env
+event-board-api/staticfiles
+event-board-api/python-env
+event-board-api/.DS_Store
+event-board-api/data/db
+
+# Contents from /event-board-web/.gitignore
+event-board-web/node_modules/
+event-board-web/.pnp
+event-board-web/.pnp.js
+event-board-web/coverage/
+event-board-web/build/
+event-board-web/.DS_Store
+event-board-web/.env.local
+event-board-web/.env.development.local
+event-board-web/.env.test.local
+event-board-web/.env.production.local
+event-board-web/npm-debug.log*
+event-board-web/yarn-debug.log*
+event-board-web/yarn-error.log*
+event-board-web/.env

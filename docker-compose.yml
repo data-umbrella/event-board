@@ -1,0 +1,43 @@
+version: '3.9'
+
+services:
+  web:
+    build:
+      context: ./event-board-web
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./event-board-web:/usr/src/app
+      - /usr/src/app/node_modules
+
+  api:
+    build:
+      context: ./event-board-api
+      dockerfile: Dockerfile
+    command: bash -c "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - ./event-board-api:/code
+    ports:
+      - "8000:8000"
+    environment:
+      - DEVELOPMENT_MODE=True
+      - DB_DATABASE=postgres
+      - DB_USERNAME=postgres
+      - DB_PASSWORD=postgres
+      - DB_HOST=db
+      - DB_PORT=5432
+      - EMAIL_HOST_USER=example@example.com
+    depends_on:
+      - db
+
+  db:
+    image: postgres
+    volumes:
+      - ./event-board-api/data/db:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres

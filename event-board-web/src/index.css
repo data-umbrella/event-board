@@ -1,0 +1,62 @@
+/* autoprefixer: off */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6, .dark p, .dark label, .dark input, .dark a, .dark p, .dark span {
+  color: #fff;
+}
+
+.dark select, .dark option {
+  color: #fff;
+}
+.dark .text-du-purple-500 a{
+  color: #6B26FF;
+}
+
+.dark button.bg-du-purple-500 {
+  background-color: #9747FF
+}
+
+/* TODO: Figure out how translate tailwind syntax */
+.search-form-gradient {
+  background: linear-gradient(180deg, rgba(130, 105, 212, 0.25) 0%, rgba(132, 136, 225, 0.25) 100%);
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+@layer components {
+  /* .timezone-select-container {
+  } */
+  .timezone-select-container .timezone-select__control {
+    @apply bg-white dark:bg-transparent border-2 border-neutral-300 dark:border-neutral-700 hover:border-neutral-400 dark:hover:border-neutral-500;
+  }
+
+  .timezone-select-container .timezone-select__control--is-focused {
+    @apply border-neutral-500 hover:border-neutral-500 dark:border-neutral-400 dark:hover:border-neutral-400 shadow-none;
+  }
+
+  .timezone-select-container .timezone-select__menu {
+    @apply bg-neutral-100 dark:bg-neutral-700 border-2 border-neutral-300 dark:border-neutral-600;
+  }
+
+  .timezone-select-container .timezone-select__option {
+    @apply text-neutral-600 dark:text-neutral-200 bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-700 dark:hover:bg-neutral-800;
+  }
+  .timezone-select-container .timezone-select__option--is-focused {
+    @apply bg-neutral-200 dark:bg-neutral-800;
+  }
+
+  .timezone-select-container .timezone-select__indicator-separator {
+    @apply bg-neutral-400;
+  }
+
+  .timezone-select-container .timezone-select__input-container,
+  .timezone-select-container .timezone-select__placeholder,
+  .timezone-select-container .timezone-select__single-value {
+    @apply text-neutral-600 dark:text-neutral-200;
+  }
+}
