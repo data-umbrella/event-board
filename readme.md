@@ -54,21 +54,16 @@ This service is responsible for running a PostgreSQL database for the project.
 
 To start all services:
 
-\```bash
+```bash
+docker-compose build
 docker-compose up
-\```
-
-To rebuild and start all services:
-
-\```bash
-docker-compose up --build
-\```
+```
 
 To stop all services:
 
-\```bash
+```bash
 docker-compose down
-\```
+```
 
 ## Conclusion
 
